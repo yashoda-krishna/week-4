@@ -22,13 +22,3 @@ public class Employee {
     @Column(name = "email")
     private String email;
 }
-
-/*
-
-d 
-s 
-1
-r
-
-
-*/

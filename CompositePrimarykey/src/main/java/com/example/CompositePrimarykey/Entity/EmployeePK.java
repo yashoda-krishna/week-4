@@ -1,18 +1,20 @@
 package com.example.CompositePrimarykey.Entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@EqualsAndHashCode
+@Getter
+@Setter
 @Embeddable
+
 public class EmployeePK implements Serializable {
-    private int empid;
-    private int deptid;
+
+    @Column(name="emp_id")
+    private Integer empId;
+    @Column(name="dept_id")
+    private Integer deptId;
 }

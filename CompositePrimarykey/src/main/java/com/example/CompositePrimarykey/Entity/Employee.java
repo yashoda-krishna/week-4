@@ -1,16 +1,13 @@
 package com.example.CompositePrimarykey.Entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+@ToString
+@Setter
+@Getter
 @Entity
-@Table(name="Employee")
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-//@IdClass(EmployeePK.class)
+@Table(name="employees")
 public class Employee {
 //    @Id
 //    private  int employeeId;
@@ -18,9 +15,7 @@ public class Employee {
 //    private int deptId;
     @EmbeddedId
     private EmployeePK employeePK;
-
     private  String name;
     private int salary;
     private String email;
-
 }
